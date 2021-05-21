@@ -5,9 +5,15 @@ import ThemeContext from './themecontext';
 
 //step3
 const Provider = props => {
-  const [color, setcolor] = useState('red');
+  const [object, setObject] = useState({ color: 'red', fontSize: '19px' });
   return (
-    <ThemeContext.Provider value={{ color: color, setcolor: setcolor }}>
+    <ThemeContext.Provider
+      value={{
+        color: object.color,
+        fontSize: object.fontSize,
+        setNewvalues: setObject
+      }}
+    >
       {props.children}
     </ThemeContext.Provider>
   );

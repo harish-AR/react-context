@@ -9,7 +9,9 @@ function ChildTheme1() {
   console.log(themeText);
   return (
     <div>
-      <h1 style={{ color: themeText.color }}>Hello text</h1>
+      <h1 style={{ color: themeText.color, fontSize: themeText.fontSize }}>
+        Hello text
+      </h1>
     </div>
   );
 }
